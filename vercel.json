@@ -1,0 +1,6 @@
+{
+  "framework": "vite",
+  "functions": {
+    "api/advisor.js": { "maxDuration": 120 }
+  }
+}

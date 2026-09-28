@@ -1,0 +1,35 @@
+// Eurostat lc_lci_lev: total hourly labour cost (EUR), NACE Rev. 2 section H
+// (Transportation and storage), enterprises with 10+ employees.
+// Pulled from the Eurostat dissemination API on 28 September 2026.
+// `year` is the latest year Eurostat has published for that country.
+export const LABOUR_COSTS = [
+  { geo: "EU27_2020", name: "EU average (27)", value: 30.6, year: 2025 },
+  { geo: "AT", name: "Austria", value: 43.5, year: 2025 },
+  { geo: "BE", name: "Belgium", value: 41.9, year: 2024 },
+  { geo: "BG", name: "Bulgaria", value: 10.1, year: 2025 },
+  { geo: "HR", name: "Croatia", value: 13.6, year: 2025 },
+  { geo: "CY", name: "Cyprus", value: 22.2, year: 2025 },
+  { geo: "CZ", name: "Czechia", value: 18.6, year: 2025 },
+  { geo: "DK", name: "Denmark", value: 48.7, year: 2025 },
+  { geo: "EE", name: "Estonia", value: 18.1, year: 2025 },
+  { geo: "FI", name: "Finland", value: 37.0, year: 2025 },
+  { geo: "FR", name: "France", value: 38.3, year: 2025 },
+  { geo: "DE", name: "Germany", value: 35.8, year: 2025 },
+  { geo: "EL", name: "Greece", value: 28.3, year: 2025 },
+  { geo: "HU", name: "Hungary", value: 14.1, year: 2025 },
+  { geo: "IT", name: "Italy", value: 28.3, year: 2025 },
+  { geo: "LV", name: "Latvia", value: 16.0, year: 2025 },
+  { geo: "LT", name: "Lithuania", value: 16.2, year: 2025 },
+  { geo: "LU", name: "Luxembourg", value: 50.1, year: 2025 },
+  { geo: "MT", name: "Malta", value: 20.3, year: 2025 },
+  { geo: "NL", name: "Netherlands", value: 41.0, year: 2024 },
+  { geo: "PL", name: "Poland", value: 17.9, year: 2025 },
+  { geo: "PT", name: "Portugal", value: 22.3, year: 2025 },
+  { geo: "RO", name: "Romania", value: 13.0, year: 2025 },
+  { geo: "SK", name: "Slovakia", value: 17.2, year: 2025 },
+  { geo: "SI", name: "Slovenia", value: 26.2, year: 2025 },
+  { geo: "ES", name: "Spain", value: 26.3, year: 2025 },
+  { geo: "SE", name: "Sweden", value: 38.3, year: 2025 },
+  { geo: "NO", name: "Norway", value: 54.8, year: 2025 },
+  { geo: "IS", name: "Iceland", value: 59.8, year: 2025 },
+];
