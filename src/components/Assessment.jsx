@@ -209,6 +209,7 @@ export function resultsForAdvisor(result, answers) {
     overall: result.overall,
     band: result.band?.label,
     pillars: result.pillars.map(({ name, pct }) => ({ name, pct })),
+    blockers: result.blockers.map((b) => ({ pillar: b.pillar, q: b.q })),
     actions: result.actions.map((a) => ({
       pillar: a.pillar,
       q: a.q,

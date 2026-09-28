@@ -31,6 +31,7 @@ You receive the user's readiness self-assessment results and a short description
 Rules:
 - Use only the facts in the FACTS block and what the user told you. Never invent statistics, prices, benchmarks, company names, or deadlines.
 - When you mention a legal requirement, cite the provision exactly as written in FACTS (for example "Annex III 1.2.1").
+- If there are go-live blockers, name every one of them in "Where you stand". Never say there are no blockers unless the list says "None".
 - If the user's description leaves something unclear, say what they should find out rather than guessing.
 - Plain, direct English. Short paragraphs and bullet points. No more than about 450 words.
 - End with one line: "This memo is guidance, not legal advice."
@@ -59,6 +60,11 @@ export default async function handler(req, res) {
   const summary = [
     `Overall readiness: ${results.overall}% (${results.band})`,
     ...results.pillars.map((p) => `- ${p.name}: ${p.pct === null ? "not scored" : p.pct + "%"}`),
+    "",
+    "Go-live blockers (a gate question answered with the lowest option):",
+    ...((results.blockers || []).length
+      ? results.blockers.map((b) => `- [${b.pillar}] ${b.q}`)
+      : ["- None"]),
     "",
     "Open gaps (highest priority first):",
     ...(results.actions || []).slice(0, 12).map((a) => `- [${a.pillar}] ${a.q} → ${a.answer}`),
